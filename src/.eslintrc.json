@@ -1,0 +1,42 @@
+{
+	"extends": [
+		"prettier"
+	],
+	"plugins": [
+		"@typescript-eslint",
+		"import",
+		"unused-imports"
+	],
+	"parser": "@typescript-eslint/parser",
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"extensions": [
+					".ts"
+				]
+			}
+		}
+	},
+	"rules": {
+		"unused-imports/no-unused-imports": "warn",
+		"sort-imports": 0,
+		"import/order": [
+			2,
+			{
+				"groups": [
+					"builtin",
+					"external",
+					"parent",
+					"sibling",
+					"index",
+					"object",
+					"type"
+				],
+				"alphabetize": {
+					"order": "asc"
+				},
+				"newlines-between": "always"
+			}
+		]
+	}
+}

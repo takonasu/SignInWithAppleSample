@@ -1,0 +1,39 @@
+{
+  "name": "node.js_signinwithapple_sample",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:takonasu/SignInWithAppleSample.git",
+  "author": "takonasu",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./build/index.js",
+    "dev": "ts-node ./src/index.ts",
+    "format": "prettier --write src/**/*.{ts,tsx}",
+    "build": "tsc -p .",
+    "build:test": "tsc -p . --noEmit",
+    "lint": "eslint './**/*.{ts,tsx}'"
+  },
+  "dependencies": {
+    "apple-signin-auth": "^1.7.5",
+    "axios": "^1.6.0",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "pg": "^8.11.3",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.17"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.20",
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "prettier": "^2.8.7",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  }
+}

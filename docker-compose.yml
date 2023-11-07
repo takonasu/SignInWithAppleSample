@@ -1,0 +1,23 @@
+version: '3'
+services:
+  node:
+    image: node:lts
+    container_name: node-lts
+    tty: true
+    volumes:
+      - ./src/:/app
+    working_dir: /app
+    ports: 
+      - '443:443'
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:13.1
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: twinte_donation_service
+    volumes:
+      - db-data:/var/lib/postgresql/data
+volumes:
+  db-data:
+    driver: local
